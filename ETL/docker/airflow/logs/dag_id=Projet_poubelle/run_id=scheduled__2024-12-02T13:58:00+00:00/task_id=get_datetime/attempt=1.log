@@ -1,0 +1,31 @@
+[2024-12-02T13:59:02.723+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-02T13:59:02.742+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Projet_poubelle.get_datetime scheduled__2024-12-02T13:58:00+00:00 [queued]>
+[2024-12-02T13:59:02.753+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Projet_poubelle.get_datetime scheduled__2024-12-02T13:58:00+00:00 [queued]>
+[2024-12-02T13:59:02.753+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-12-02T13:59:02.765+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): get_datetime> on 2024-12-02 13:58:00+00:00
+[2024-12-02T13:59:02.770+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=13009) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-02T13:59:02.771+0000] {standard_task_runner.py:72} INFO - Started process 13011 to run task
+[2024-12-02T13:59:02.772+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Projet_poubelle', 'get_datetime', 'scheduled__2024-12-02T13:58:00+00:00', '--job-id', '37857', '--raw', '--subdir', 'DAGS_FOLDER/Projet_poubelle.py', '--cfg-path', '/tmp/tmpavd1v6iw']
+[2024-12-02T13:59:02.772+0000] {standard_task_runner.py:105} INFO - Job 37857: Subtask get_datetime
+[2024-12-02T13:59:02.817+0000] {task_command.py:467} INFO - Running <TaskInstance: Projet_poubelle.get_datetime scheduled__2024-12-02T13:58:00+00:00 [running]> on host 5365fe4338c6
+[2024-12-02T13:59:02.875+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Projet_poubelle' AIRFLOW_CTX_TASK_ID='get_datetime' AIRFLOW_CTX_EXECUTION_DATE='2024-12-02T13:58:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-02T13:58:00+00:00'
+[2024-12-02T13:59:02.876+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-02T13:59:02.876+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-02T13:59:02.876+0000] {logging_mixin.py:190} INFO - Current task name:get_datetime state:running start_date:2024-12-02 13:59:02.742961+00:00
+[2024-12-02T13:59:02.876+0000] {logging_mixin.py:190} INFO - Dag name:Projet_poubelle and current dag run status:running
+[2024-12-02T13:59:02.876+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-02T13:59:02.876+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-12-02T13:59:02.877+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'date']
+[2024-12-02T13:59:02.886+0000] {subprocess.py:86} INFO - Output:
+[2024-12-02T13:59:02.889+0000] {subprocess.py:93} INFO - Mon Dec  2 13:59:02 UTC 2024
+[2024-12-02T13:59:02.889+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-12-02T13:59:02.922+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-02T13:59:02.923+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Projet_poubelle, task_id=get_datetime, run_id=scheduled__2024-12-02T13:58:00+00:00, execution_date=20241202T135800, start_date=20241202T135902, end_date=20241202T135902
+[2024-12-02T13:59:02.935+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-02T13:59:02.936+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-02T13:59:02.936+0000] {logging_mixin.py:190} INFO - Dag name:Projet_poubelle queued_at:2024-12-02 13:59:00.690272+00:00
+[2024-12-02T13:59:02.936+0000] {logging_mixin.py:190} INFO - Task hostname:5365fe4338c6 operator:BashOperator
+[2024-12-02T13:59:02.984+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-02T13:59:02.997+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

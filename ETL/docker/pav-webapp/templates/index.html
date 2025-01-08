@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<!--Enter Name -->
+<div style="padding:10px;">
+  <div class="compute">
+    <form action="{{ url_for('index') }}" method="POST">
+      <label>Calcul du nombre de poubelles par type.</label>
+      <input type="submit" value="Lancer le calcul !">
+    </form>
+    {% if results %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Total</th>
+                </tr>            
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{ result[0] }}</td>
+                    <td>{{ result[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

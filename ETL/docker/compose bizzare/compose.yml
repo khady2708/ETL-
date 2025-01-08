@@ -1,0 +1,11 @@
+services:
+  app:
+    build: ./etl-app
+    volumes:
+      - ./data:/app/data
+  web:
+    build: ./pav-webapp
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data

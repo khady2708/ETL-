@@ -1,0 +1,34 @@
+[2024-12-16T14:45:01.024+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-16T14:45:01.035+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Projet_poubelle.file_sensor scheduled__2024-12-16T14:44:00+00:00 [queued]>
+[2024-12-16T14:45:01.040+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Projet_poubelle.file_sensor scheduled__2024-12-16T14:44:00+00:00 [queued]>
+[2024-12-16T14:45:01.040+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-12-16T14:45:01.050+0000] {taskinstance.py:2888} INFO - Executing <Task(FileSensor): file_sensor> on 2024-12-16 14:44:00+00:00
+[2024-12-16T14:45:01.056+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=14652) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-16T14:45:01.057+0000] {standard_task_runner.py:72} INFO - Started process 14662 to run task
+[2024-12-16T14:45:01.058+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Projet_poubelle', 'file_sensor', 'scheduled__2024-12-16T14:44:00+00:00', '--job-id', '54229', '--raw', '--subdir', 'DAGS_FOLDER/Projet_poubelle.py', '--cfg-path', '/tmp/tmpsy3ga76h']
+[2024-12-16T14:45:01.058+0000] {standard_task_runner.py:105} INFO - Job 54229: Subtask file_sensor
+[2024-12-16T14:45:01.083+0000] {task_command.py:467} INFO - Running <TaskInstance: Projet_poubelle.file_sensor scheduled__2024-12-16T14:44:00+00:00 [running]> on host 5365fe4338c6
+[2024-12-16T14:45:01.131+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Projet_poubelle' AIRFLOW_CTX_TASK_ID='file_sensor' AIRFLOW_CTX_EXECUTION_DATE='2024-12-16T14:44:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-16T14:44:00+00:00'
+[2024-12-16T14:45:01.131+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-16T14:45:01.131+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-16T14:45:01.132+0000] {logging_mixin.py:190} INFO - Current task name:file_sensor state:running start_date:2024-12-16 14:45:01.035635+00:00
+[2024-12-16T14:45:01.132+0000] {logging_mixin.py:190} INFO - Dag name:Projet_poubelle and current dag run status:running
+[2024-12-16T14:45:01.132+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-16T14:45:01.132+0000] {baseoperator.py:405} WARNING - FileSensor.execute cannot be called outside TaskInstance!
+[2024-12-16T14:45:01.137+0000] {base.py:84} INFO - Retrieving connection 'fs_default'
+[2024-12-16T14:45:01.138+0000] {filesystem.py:109} INFO - Poking for file /opt/***/data/point_apports_poubelles.csv
+[2024-12-16T14:45:01.138+0000] {filesystem.py:113} INFO - Found File /opt/***/data/point_apports_poubelles.csv last modified: 20230630101040
+[2024-12-16T14:45:01.138+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2024-12-16T14:45:01.138+0000] {filesystem.py:109} INFO - Poking for file /opt/***/data/point_apports_poubelles.csv
+[2024-12-16T14:45:01.138+0000] {filesystem.py:113} INFO - Found File /opt/***/data/point_apports_poubelles.csv last modified: 20230630101040
+[2024-12-16T14:45:01.143+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-16T14:45:01.144+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Projet_poubelle, task_id=file_sensor, run_id=scheduled__2024-12-16T14:44:00+00:00, execution_date=20241216T144400, start_date=20241216T144501, end_date=20241216T144501
+[2024-12-16T14:45:01.149+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-16T14:45:01.149+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-16T14:45:01.149+0000] {logging_mixin.py:190} INFO - Dag name:Projet_poubelle queued_at:2024-12-16 14:45:00.212517+00:00
+[2024-12-16T14:45:01.149+0000] {logging_mixin.py:190} INFO - Task hostname:5365fe4338c6 operator:FileSensor
+[2024-12-16T14:45:01.190+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-16T14:45:01.207+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-16T14:45:01.208+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

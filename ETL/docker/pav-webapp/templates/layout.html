@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Minimal Flask App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <section>
+            <div>
+                <img src="{{ url_for('static', filename='images/flask-icon.svg') }}" alt="Flask Logo" width="192" height="192"/>
+            </div>
+            {% block content %}{% endblock %}            
+        </section>
+    </body>
+</html>
